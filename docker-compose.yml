@@ -7,6 +7,8 @@ services:
       args:
         DOCKER_BUILDKIT: 1
     restart: always
+    ports:
+      - 3000:3000
     command: node web/server.js web
     depends_on:
       - api
